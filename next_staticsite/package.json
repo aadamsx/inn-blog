@@ -1,0 +1,29 @@
+{
+  "name": "next_staticsite",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "deploy": "aws s3 sync ./out/ s3://nextjs-staticsite-test1/",
+    "buildexport": "npm run build && npm run export",
+    "builddeploy": "npm run buildexport && npm run deploy",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.0.4",
+    "classnames": "^2.3.1",
+    "date-fns": "^2.22.1",
+    "isomorphic-unfetch": "^3.1.0",
+    "next": "latest",
+    "postcss": "^8.1.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "tailwindcss": "^2.1.1",
+    "remark": "12.0.0",
+    "remark-html": "11.0.2"
+  },
+  "devDependencies": {}
+}
