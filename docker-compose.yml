@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  nextjs:
+    ports:
+      - 3000:3000
+    build:
+      context: ./next_staticsite
+      dockerfile: Dockerfile
+  cms:
+    ports:
+      - 1337:1337
+    buld:
+      context: ./next_cms
+      dockerfile: Dockerfile
